@@ -41,7 +41,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
     });
 });
 
-app.listen(process.env.PORT || 45455, (err) => {
+app.listen(process.env.RAILWAY_PRIVATE_DOMAIN || 45455, (err) => {
     if (err) {
         return console.error(err);
     }
