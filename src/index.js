@@ -10,12 +10,6 @@ app.use(express.json());
 app.use(cors());
 app.use(router)
 
-// const _PORT = 45455;
-
-// const _USERNAME = "vasilinamakarkina";
-// const _PASSWORD = "L6NNwUdLVQ2Eab51";
-// const _URL = `mongodb+srv://${_USERNAME}:${_PASSWORD}@cluster0.dvwz5ap.mongodb.net/shop?retryWrites=true&w=majority&appName=Cluster0`;
-
 mongoose
   .connect(process.env.MONGODB_URL)
   .then(() => console.log("db ok"))
@@ -47,7 +41,6 @@ app.listen(process.env.PORT || 45455, (err) => {
     if (err) {
         return console.error(err);
     }
-    console.log('Server is running on port', _PORT);
 });
 
 // app.get('/products', ProductController.getAllProducts); //получение всех продуктов
