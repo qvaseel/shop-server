@@ -13,7 +13,7 @@ app.use(router)
 const _USERNAME = "vasilinamakarkina";
 const _PASSWORD = "L6NNwUdLVQ2Eab51";
 const _URL = `mongodb+srv://${_USERNAME}:${_PASSWORD}@cluster0.dvwz5ap.mongodb.net/shop?retryWrites=true&w=majority&appName=Cluster0`;
-
+console.log(_URL)
 mongoose
   .connect(_URL)
   .then(() => console.log("db ok"))
