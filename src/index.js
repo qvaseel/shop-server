@@ -10,8 +10,12 @@ app.use(express.json());
 app.use(cors());
 app.use(router)
 
+const _USERNAME = "vasilinamakarkina";
+const _PASSWORD = "L6NNwUdLVQ2Eab51";
+const _URL = `mongodb+srv://${_USERNAME}:${_PASSWORD}@cluster0.dvwz5ap.mongodb.net/shop?retryWrites=true&w=majority&appName=Cluster0`;
+
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect(_URL)
   .then(() => console.log("db ok"))
   .catch((err) => console.log("db ne ok", err));
 
