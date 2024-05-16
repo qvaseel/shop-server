@@ -1,10 +1,6 @@
 {
   "name": "shop-server",
   "version": "1.0.0",
-  "builds": {
-    "src": "src/index.js",
-    "use": "@vercel/node"
-  },
   "description": "",
   "main": "index.js",
   "type": "module",
